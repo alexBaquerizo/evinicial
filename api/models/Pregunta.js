@@ -19,7 +19,13 @@ module.exports = {
 	    	type: 'string',
 	    	size: 255,
 	    	required: true
-	    }
+	    },
+
+	     // Add a reference to Cuestionario
+        cuestionarios:{
+            collection: 'cuestionario',
+            via: 'preguntas'
+        }
 	}
 };
 

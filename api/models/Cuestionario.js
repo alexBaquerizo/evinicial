@@ -7,9 +7,8 @@
 
 //Cuestionario -> clase
 //cuestionario -> objeto
-
 module.exports = {
-
+	
   attributes: {
 
     observaciones : { type: 'string' },
@@ -19,6 +18,16 @@ module.exports = {
         preguntas: {
             collection: 'pregunta',
             via: 'cuestionarios'
+        },
+
+        duplicar: function(cb){
+        	cuestionarioJSON =this.toJSON();
+		    delete cuestionarioJSON['id'];
+		    Cuestionario.create(cuestionarioJSON)// Metodo de Instancia.
+		    .exec(function createCB (err, created){
+		      if (err) return cb(err);
+		      cb(null, created);
+		    })      	
         }
   },
 

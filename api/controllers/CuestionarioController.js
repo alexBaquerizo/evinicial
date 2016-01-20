@@ -23,7 +23,15 @@ module.exports = {
     duplicar: function(req, res, next) {
     	req.cuestionario.duplicar(function (err, cuestionarioDuplicado) {
     		res.json(cuestionarioDuplicado)});
-    }
+    },
+
+	asociarGrupo: function(req, res, next) {
+	console.log(req.cuestionario.id + ' - ' + req.cuestionario.alumnos)
+	req.cuestionario.asociarGrupo(req.grupo, function (err, cuestionario) {
+		if(err){next(err);};
+			res.json(req.cuestionario);
+		});
+	},
 
 	/*
     duplicar: function(req, res, next) {

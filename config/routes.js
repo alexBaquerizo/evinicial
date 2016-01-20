@@ -45,4 +45,10 @@ module.exports.routes = {
     'CuestionarioController.load',
     'CuestionarioController.duplicar'
   ],
+
+  'POST r|^/cuestionario/(\\d+)/asociarGrupo/(\\d+)$|cuestionarioId,grupoId' : [
+    'CuestionarioController.load',
+    'GrupoController.load',
+    'CuestionarioController.asociarGrupo'
+  ],
 };

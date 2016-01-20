@@ -20,6 +20,11 @@ module.exports = {
             via: 'cuestionarios'
         },
 
+        alumnos: {
+            collection: 'alumno',
+            via: 'cuestionarios'
+        },
+
         duplicar: function(cb){
         	cuestionarioJSON =this.toJSON();
 		    delete cuestionarioJSON['id'];
@@ -28,7 +33,18 @@ module.exports = {
 		      if (err) return cb(err);
 		      cb(null, created);
 		    })      	
-        }
+        },
+
+        asociarGrupo: function (grupo, cb) {
+
+	    while (grupo.alumnos.length){
+	    	var alumno = grupo.alumnos.pop();
+		    this.alumnos.add(alumno.id);
+		    this.save(console.log);
+	    }
+	    	cb(null, this)
+    }
+
   },
 
   duplicar: function (cuestionario, cb) {

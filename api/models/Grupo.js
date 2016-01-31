@@ -23,6 +23,7 @@ module.exports = {
             collection: 'alumno',
             via: 'grupo'
        	},
+
   }
 };
 

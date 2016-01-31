@@ -29,5 +29,6 @@ module.exports = {
       	}
       	res.json(resultado);
     },
+
 };
 

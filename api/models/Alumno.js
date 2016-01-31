@@ -9,24 +9,25 @@ module.exports = {
 
   attributes: {
 
-    dni : { type: 'string', size: 10  },
+    dni : { type: 'string', size: 10 },
 
-    apellido1 : { type: 'string', required: true, size: 30 },
+    apellido1 : { type: 'string', size: 30 },
 
-    apellido2 : { type: 'string', size: 30  },
+    apellido2 : { type: 'string', size: 30 },
 
-    nombre : { type: 'string', required: true, size: 30 },
+    nombre : { type: 'string', size: 30, required: true },
 
-    fechaNac : { type: 'date'},
+    fechaNac : { type: 'date' },
 
-    grupo:{
-            model:'grupo'
-        },
+    grupo: {
+    	model: 'grupo'
+    },
 
-    cuestionarios:{
-        collection: 'cuestionario',
-        via: 'alumnos'
-    	}
+    cuestionarios : {
+    	collection : 'cuestionario',
+    	via : 'alumnos'
     }
+
+  }
 };
 

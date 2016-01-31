@@ -36,9 +36,7 @@ module.exports.routes = {
     view: 'homepage'
   },
 
-<<<<<<< HEAD
- 'GET r|^/pregunta/(\\d+)/corregir$|preguntaId': [
-=======
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
@@ -49,31 +47,19 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
   'GET r|^/pregunta/(\\d+)/corregir$|preguntaId' : [
->>>>>>> 585181014b72199adff224b865b9e6b47a9a4ae0
     'PreguntaController.load',
     'PreguntaController.corregirRespuesta'
   ],
 
-<<<<<<< HEAD
   'POST r|^/cuestionario/(\\d+)/duplicar$|cuestionarioId': [
-=======
-    'POST r|^/cuestionario/(\\d+)/duplicar$|cuestionarioId' : [
->>>>>>> 585181014b72199adff224b865b9e6b47a9a4ae0
     'CuestionarioController.load',
     'CuestionarioController.duplicar'
   ],
 
-<<<<<<< HEAD
+
   'POST r|^/cuestionario/(\\d+)/asociarGrupo/(\\d+)$|cuestionarioId,grupoId' : [
-=======
-    'POST r|^/cuestionario/(\\d+)/asociarGrupo/(\\d+)$|cuestionarioId,grupoId' : [
->>>>>>> 585181014b72199adff224b865b9e6b47a9a4ae0
     'CuestionarioController.load',
     'GrupoController.load',
     'CuestionarioController.asociarGrupo'
   ],
-<<<<<<< HEAD
-=======
-
->>>>>>> 585181014b72199adff224b865b9e6b47a9a4ae0
 };

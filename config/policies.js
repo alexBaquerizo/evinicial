@@ -48,8 +48,7 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
-<<<<<<< HEAD
-=======
+
   '*': [
     'basicAuth',
     'passport',
@@ -65,6 +64,4 @@ module.exports.policies = {
   AuthController: {
     '*': ['passport']
   }
-
->>>>>>> 585181014b72199adff224b865b9e6b47a9a4ae0
 };

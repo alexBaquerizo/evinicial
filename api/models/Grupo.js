@@ -19,10 +19,10 @@ module.exports = {
 
     curso : { type: 'int', size: 1},
 
-    alumnos: {
-            collection: 'alumno',
-            via: 'grupo'
-       	},
+    alumnos : {
+    	collection: 'alumno',
+    	via: 'grupos'
+    }
 
   }
 };
